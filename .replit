@@ -1,5 +1,8 @@
 modules = ["python-3.11"]
 
 [nix]
-packages = ["cairo", "ffmpeg-full", "freetype", "ghostscript", "glibcLocales", "gobject-introspection", "gtk3", "pkg-config", "qhull", "tcl", "tk"]
+packages = ["cairo", "ffmpeg-full", "freetype", "ghostscript", "glibcLocales", "gobject-introspection", "gtk3", "mailutils", "pkg-config", "qhull", "tcl", "tk"]
 channel = "stable-25_05"
+
+[agent]
+expertMode = true

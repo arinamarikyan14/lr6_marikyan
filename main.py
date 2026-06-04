@@ -13,6 +13,7 @@ df = pd.DataFrame(dataset, columns=['var1', 'var2'])
 print(df.head(2))
 from yellowbrick.cluster import KElbowVisualizer
 from sklearn.cluster import KMeans
-model = KMeans()
-visualizer = KElbowVisualizer(model, k=(1, 12)).fit(df)
-visualizer.savefig('fig')
+model = KMeans(n_clusters=4, n_init=10, random_state=0)
+visualizer = KElbowVisualizer(model, k=(2, 12), force_model=True)
+visualizer.fit(df)
+visualizer.show(outpath="elbow_plot.png")
